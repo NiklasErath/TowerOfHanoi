@@ -25,7 +25,7 @@ Start the program with a designed interface.
 (encourage people to work on your project)
 
 ## License 
-
+This code is open source. 
 
 ## Contact
 Niklas Erath - cc231030@fhstp.ac.at
@@ -34,3 +34,4 @@ Niklas Erath - cc231030@fhstp.ac.at
 - Visual Studio Code
 - C# Documentation
 - Tower of Hanoi - Wikipedia
+- Tower of Hanoi Youtube videos

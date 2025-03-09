@@ -16,9 +16,9 @@ class Recursive {
         }
     }
 
+    // Move the disk from the start rod to the final rod
     static void MoveDisk(Stack<int> from, Stack<int> to, string fromName, string toName, Stack<int> start, Stack<int> middle, Stack<int> final, int totalDisks) {
         if (from.Count == 0) {
-            // pop means to remove the top element of the stack
             int disk = to.Pop();
             from.Push(disk);
             // Console.WriteLine("Move disk " + disk + " from " + toName + " to " + fromName);
@@ -32,17 +32,18 @@ class Recursive {
             if (fromTop < toTop) {
                 from.Pop();
                 to.Push(fromTop);
-                // Console.WriteLine("Move disk " + fromTop + " from " + fromName + " to " + toName);
+            // Console.WriteLine("Move disk " + fromTop + " from " + fromName + " to " + toName);
             } else {
                 to.Pop();
                 from.Push(toTop);
-                // Console.WriteLine("Move disk " + toTop + " from " + toName + " to " + fromName);
+            // Console.WriteLine("Move disk " + toTop + " from " + toName + " to " + fromName);
             }
         }
         Animation.DrawRods(start, middle, final, totalDisks);
     }
 }
 
+// Main class to run the program
 class Program {
     static void Main(string[] args) {
         if (args.Length != 2) {
@@ -84,6 +85,7 @@ class Program {
     }
 }
 
+// Iterative solution to move the disks from start to final rod
 class Iteration {
     static void MoveDisk(Stack<int> from, Stack<int> to, string fromName, string toName, Stack<int> start, Stack<int> middle, Stack<int> final, int totalDisks) {
         if (from.Count == 0) {
@@ -101,11 +103,11 @@ class Iteration {
             if (fromTop < toTop) {
                 from.Pop();
                 to.Push(fromTop);
-               // Console.WriteLine("Move disk " + fromTop + " from " + fromName + " to " + toName);
+            // Console.WriteLine("Move disk " + fromTop + " from " + fromName + " to " + toName);
             } else {
                 to.Pop();
                 from.Push(toTop);
-                // Console.WriteLine("Move disk " + toTop + " from " + toName + " to " + fromName);
+            // Console.WriteLine("Move disk " + toTop + " from " + toName + " to " + fromName);
             }
         }
         Animation.DrawRods(start, middle, final, totalDisks);
@@ -149,14 +151,13 @@ class Iteration {
 // Terminal Animation to visualize the move of the disks
 class Animation {
     public static void DrawRods(Stack<int> start, Stack<int> middle, Stack<int> final, int totalDisks) {
-        // clear the console before drawing the new state
         Console.Clear();
         
         List<string[]> rods = new List<string[]> { new string[totalDisks], new string[totalDisks], new string[totalDisks] };
 
-        FillRod(rods[0], start, totalDisks);
-        FillRod(rods[1], middle, totalDisks);
-        FillRod(rods[2], final, totalDisks);
+        DrawDisks(rods[0], start, totalDisks);
+        DrawDisks(rods[1], middle, totalDisks);
+        DrawDisks(rods[2], final, totalDisks);
 
         for (int i = totalDisks - 1; i >= 0; i--) {
             Console.WriteLine($"|{rods[0][i].PadRight(totalDisks)}| |{rods[1][i].PadRight(totalDisks)}| |{rods[2][i].PadRight(totalDisks)}|");
@@ -166,8 +167,8 @@ class Animation {
         System.Threading.Thread.Sleep(500);
     }
 
-    static void FillRod(string[] rod, Stack<int> stack, int totalDisks) {
-        // reverse the stack to draw the disks from the bottom to the top
+    // Draw the Disks inside the rods - reverse order to get the smallest disk at the top
+    static void DrawDisks(string[] rod, Stack<int> stack, int totalDisks) {
         var disks = stack.Reverse().ToArray();
         for (int i = 0; i < totalDisks; i++) {
             if (i < disks.Length) {
