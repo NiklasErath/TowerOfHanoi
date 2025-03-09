@@ -14,11 +14,11 @@ I have a `Program` class which contains the `Main` function and the base functio
 
 
 ### Recursive Method: 
-The `Main` function calls the `Recursive.Move` method if the user types `dotnet run -recursive 3` (or another number of disks instead of 3). The logic behind the recursive method is that it calls its own function repeatedly until `n == 1`, at which point it calls the `MoveDisk` function to move the disk to a rod. With each move, the `DrawRods` method is called to visualize the current position of the disks in the terminal. Before each move, the terminal gets cleared to provide a better visualization.
+The `Main` function calls the `Recursive.Move` method if the user types `dotnet run -recursive 3` (or another number of disks instead of 3) into the terminal. The logic behind the recursive method is that it calls its own function repeatedly until `n == 1`, at which point it calls the `MoveDisk` function to move the disk to a rod. With each move, the `DrawRods` method is called to visualize the current position of the disks in the terminal. Before each move, the terminal gets cleared to provide a better visualization.
 
 
 ### Iterative Method: 
-The `Main` function calls the `Iteration.Move` method if the user types `dotnet run -iterative 3` (or another number of disks instead of 3). The iterative method uses a loop to move the disks between the rods according to the rules of the Tower of Hanoi. The `MoveDisk` function is called to handle the actual disk movement, and the `DrawRods` method is called after each move to visualize the current state of the rods and disks in the terminal. The terminal is cleared before each move to ensure a clear visualization.
+The `Main` function calls the `Iteration.Move` method if the user types `dotnet run -iterative 3` (or another number of disks instead of 3) into the termonal. The iterative method uses a loop to move the disks between the rods according to the rules of the Tower of Hanoi. The `MoveDisk` function is called to handle the actual disk movement, and the `DrawRods` method is called after each move to visualize the current state of the rods and disks in the terminal. The terminal is cleared before each move to ensure a clear visualization.
 
 
 ## Additional Features
