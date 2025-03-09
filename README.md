@@ -9,9 +9,11 @@ The Tower of Hanoi is a classic mathematical puzzle that involves moving a set o
 ## Getting Started
 ### Prerequisites
 - you have to install .NET Core SDK: You can download it from (https://dotnet.microsoft.com/download).
+
 ### Installation
-- open the code in visual studio code and open the terminal
-- type cde TowerOfHanoi/hanoi to get to the project directory
+- clone the repository or download the code and unwrap it. 
+- open the code in visual studio code and open the terminal.
+- type cde TowerOfHanoi/hanoi to get to the project directory.
 
 ### Usage
 - to run the program, use the follwoing commands: 
@@ -22,7 +24,8 @@ The Tower of Hanoi is a classic mathematical puzzle that involves moving a set o
 Start the program with a designed interface. 
 
 ## Contributing 
-(encourage people to work on your project)
+Clone the repository and feel free to expant it:
+https://github.com/NiklasErath/TowerOfHanoi
 
 ## License 
 This code is open source. 
